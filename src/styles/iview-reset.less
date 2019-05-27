@@ -1,0 +1,288 @@
+/*!
+* Reset css for iview 2.*
+*
+* Website:          https://www.lovchun.com
+* Github:           https://github.com/PassionZale
+* Author:           Lei Zhang
+*/
+@distance-small: 10px;
+@distance-default: 20px;
+@distance-large: 40px;
+@primary-color: #2d8cf0;
+@default-background-color: #f9f9f9;
+@left-container-width: 250px;
+@ivew-input-width: 200px;
+
+html,
+body {
+  height: 100%;
+  background-color: @default-background-color;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.input_width {
+  width: @ivew-input-width;
+}
+
+.ivu-input,
+.ivu-select {
+  width: @ivew-input-width;
+}
+
+.inline-box {
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+
+.gvt-content {
+  padding: @distance-small  !important;
+  position: relative;
+
+  .main {
+    padding: @distance-default  !important;
+  }
+}
+
+.LayoutList {
+  .form-wrapper {
+    padding-bottom: @distance-default;
+
+    .ivu-form-item {
+      margin-bottom: @distance-default  !important;
+    }
+  }
+
+  .tool-wrapper {
+    padding-bottom: @distance-default;
+
+    .tool-left {
+      text-align: left;
+    }
+
+    .tool-right {
+      text-align: right;
+    }
+  }
+
+  .table-wrapper {
+    .ivu-table {
+      .ivu-btn-text {
+        color: @primary-color;
+        border-radius: 0;
+        padding: 0;
+        margin-right: @distance-default;
+      }
+    }
+  }
+
+  .page-wrapper {
+    padding-top: @distance-default;
+    text-align: right;
+  }
+}
+
+.LayoutTree {
+  min-height: 500px;
+
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  .left-container {
+    float: left;
+    width: @left-container-width;
+
+    .tree-tool-wrapper {
+      padding-bottom: @distance-small;
+
+      button {
+        margin-bottom: @distance-small;
+      }
+    }
+  }
+
+  .distance-wrapper {
+    position: absolute;
+    left: @left-container-width + @distance-default + @distance-small;
+    top: 0;
+    bottom: 0;
+    width: @distance-small;
+    background: @default-background-color;
+  }
+
+  .right-container {
+    margin-left: @left-container-width + @distance-default + @distance-small;
+
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+    .form-wrapper {
+      padding-bottom: @distance-large;
+
+      .ivu-form-item {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .tool-wrapper {
+      padding-bottom: @distance-default;
+      overflow: auto;
+
+      .tool-left,
+      .tool-right {
+        display: block;
+        width: 50%;
+      }
+
+      .tool-left {
+        float: left;
+        text-align: left;
+      }
+
+      .tool-right {
+        float: right;
+        text-align: right;
+      }
+    }
+
+    .table-wrapper {
+      .ivu-table {
+        .ivu-btn-text {
+          color: @primary-color;
+          border-radius: 0;
+          padding: 0;
+          margin-right: @distance-default;
+        }
+      }
+    }
+
+    .page-wrapper {
+      padding-top: @distance-default;
+      float: left;
+      width: 100%;
+      text-align: right;
+    }
+  }
+}
+
+.gvt-login-skin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-image: url("//47.75.105.17:22124/group1/M00/01/07/wKi5SlvrjKSAc6R_AAIzKAUmJ-U070.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gvt-login-icon {
+  display: block;
+  z-index: 3;
+  position: absolute;
+  top: 90px;
+  left: 80px;
+  width: 800px;
+  height: auto;
+}
+
+.gvt-login-form {
+  z-index: 5;
+  position: absolute;
+  top: 90px;
+  right: 180px;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 20px;
+  color: #333333;
+
+  .gvt-login-title {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.gvt-form {
+  .gvt-form-item {
+    margin-bottom: 10px;
+  }
+
+  .tp-login-item {
+    margin-top: 10px;
+    display: inline-block;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    user-select: none;
+
+    img {
+      display: inline-block;
+      height: 100%;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    span {
+      display: inline-block;
+      line-height: 20px;
+      vertical-align: middle;
+      text-align: left;
+      color: #999;
+    }
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  input {
+    border: 1px solid #cccccc;
+    height: 36px;
+    border-radius: 4px;
+    width: 100%;
+    padding: 0 6px;
+  }
+
+  button {
+    width: 100%;
+    background-color: #409fff;
+    border: 1px solid #d7d7d7;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+}
+
+.gvt-login-footer {
+  height: 60px;
+  background-color: #313b4a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #e6e6e6;
+  z-index: 3;
+  padding: 15px 0 30px 0;
+  text-align: center;
+  font-size: 12px;
+}
